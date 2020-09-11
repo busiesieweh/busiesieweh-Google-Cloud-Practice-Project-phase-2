@@ -1,0 +1,13 @@
+ Create dataset
+
+gcloud alpha bq datasets create  logdata --description 'My New Dataset'
+
+  Create Tables
+
+gcloud alpha bq tables create accesslog 
+--dataset= logdata 
+--description= My New Table
+--expiration= default-table-expiration
+--schema= gs://cloud-training/gcpfci/access_log.csv     
+--schema-file= CSV   
+--use-legacy-sql
